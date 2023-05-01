@@ -1,0 +1,14 @@
+here are the general steps for configuring OIDC authentication for a private AKS cluster:
+
+Create an Azure Active Directory (Azure AD) application: First, you need to create an Azure AD application and register it with your Azure AD tenant. This application will be used to authenticate users and obtain access tokens.
+
+Create a Kubernetes secret: Next, you need to create a Kubernetes secret that contains the Azure AD application ID and client secret. This secret will be used by the authentication proxy to authenticate with Azure AD.
+
+Configure the authentication proxy: You need to configure the authentication proxy to intercept incoming traffic to your AKS cluster and authenticate users using OIDC. This involves deploying the authentication proxy as a Kubernetes deployment or DaemonSet, and configuring it with the necessary settings and parameters.
+
+Create a Kubernetes ingress resource: You need to create a Kubernetes ingress resource that routes traffic to the authentication endpoint and specifies the OIDC callback URL.
+
+Configure Azure Private Link (optional): If you are using Azure Private Link to access your AKS cluster, you need to configure the necessary settings to enable the private endpoint to route traffic through the authentication proxy.
+
+There are several tools and libraries available that can help with this process, such as the Kubernetes OIDC authentication proxy or the Dex OIDC connector for Kubernetes. Additionally, the AKS documentation provides more detailed instructions on how to configure OIDC authentication for your cluster.
+

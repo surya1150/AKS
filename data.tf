@@ -1,7 +1,11 @@
-# # data "azurerm_resource_group" "rg" {
-# #   name = "aks-rg"
-# # }
-
+data "azurerm_resource_group" "rg" {
+  name = "aks-rg"
+}
+data "azurerm_subnet" "subnet" {
+  name                 = "aks-subnet"
+  virtual_network_name = "aka-private"
+  resource_group_name  = "aks-rg"
+}
 # data "azurerm_virtual_network_gateway" "example" {
 #   name                = "aks-vnet-24408013"
 #   resource_group_name = "MC_aks-rg_aks-test_eastus"

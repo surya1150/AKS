@@ -1,0 +1,19 @@
+1. OIDC connect to AKS - https://learn.microsoft.com/en-gb/azure/aks/use-oidc-issuer
+2. SPLUNK Indexes creation for Azure
+3. Azure Bastian Documentation - 
+test-cluster-bj1uh0hv.4fc14cd6-ddc8-4ddc-bb13-510ddbed6964.privatelink.eastus.azmk8s.io
+
+private-test - 10.0.0.4
+
+> test-cluster-me8dsa5t.881826dd-017f-419d-ba69-d9fc65b43d38.privatelink.eastus.azmk8s.io
+
+
+
+
+az aks get-credentials --resource-group aks-rg --name test-cluster-aks
+
+
+az aks get-credentials --resource-group aks-rg --name test-cluster-aks
+
+kubectl config set-cluster test-cluster-aks --server=https://test.881826dd-017f-419d-ba69-d9fc65b43d38.privatelink.eastus.azmk8s.io
+

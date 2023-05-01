@@ -36,3 +36,6 @@ provider "azurerm" {
 provider "curl" {}
 
 provider "random" {}
+provider "helm" {
+  
+}
